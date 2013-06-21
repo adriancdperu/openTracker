@@ -92,7 +92,15 @@ class Addon {
             include($this->_addon . "install.php");
             return true;
         }
+        
+    function NotInstall(){
+        if ($this->checkInstall()){
+            include($this->_addon . "install.php")}
+            return false;
+        }    
+        
     }
+    
 
 }
 
